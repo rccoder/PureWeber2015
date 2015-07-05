@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Rccoder's Home</title>
+    <meta name="author" content="PureWeber-rccoder" />
+    <meta name="description" content="2015年PureWeber招新" />
+    <meta name="keywords" content="PureWeber" />
+    <link rel="stylesheet" type="text/css" href="./css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="./css/examples.css" />
+    <link rel="stylesheet" href="./css/style.css">
+    <!--[if IE]>
+        <script type="text/javascript">
+        var console = { log: function() {} };
+        </script>
+        <![endif]-->
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="./js/jquery.fullPage.js"></script>
+    <script type="text/javascript" src="./js/examples.js"></script>
+    <script type="text/javascript" src="./js/pureweber.js"></script>
+</head>
+
+<body>
+    <div id="fullpage">
+        <div class="section " id="section0">
+            <h1>2015年PureWeber招新</h1>
+            <p></p>
+            <p>——含2015年夏季学期Web培训班</p>
+        </div>
+        <div class="section" id="section1">
+            <p>你来了...</p>
+            <p>看到了这个奇怪的页面...</p>
+            <p>回首进入大学的这一年...</p>
+            <p>是否还在为copy那个通讯录而感到悲伤?</p>
+            <p>是否还在为黑框里面运行C感到枯燥?</p>
+            <p>是否还不知道你学的这些能够做什么?</p>
+            <p>...</p>
+            <p>或许，你想这样...</p>
+            <p>做出你的第一个网站？应用？或者其他的东西</p>
+            <p>来博得某人一笑?</p>
+            <p>或者赚取你的第一桶金?</p>
+        </div>
+        <div class="section" id="section2">
+            <p>没错...</p>
+            <p>你看到了这个页面...</p>
+            <p>可能给你了一个解决上页问题的机会...</p>
+            <p>PureWeber</p>
+            <p>如果你是一个汉子或者妹子...</p>
+            <p>如果你想进入Web的世界...</p>
+            <p>那么，我们欢迎你！</p>
+            <p>滑动你的手机或者鼠标的滚轮...</p>
+            <p>获得加入PureWeber的机会</p>
+        </div>
+        <div class="section" id="section3">
+            <div class="con">
+                <h1>加入我们：</h1>
+                <div class="form">
+                    <form onsubmit="return false">
+                        <input type="text" name="ID" id="ID" placeholder="学号">
+                        <input type="text" name="Name" id="Name" placeholder="姓名">
+                        <input type="text" name="school" id="school" placeholder="学院">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="text" name="Tel" id="Tel" placeholder="电话">
+                        <input type="text" name="qq" id="qq" placeholder="QQ">
+                        <textarea name="intro" id="intro" placeholder="自我介绍"></textarea>
+                        <div class="warn"></div>
+                        <button id="bt" type="submit">点击报名</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="section" id="section4">
+            <div class="con">
+                <p>你能获得:</p>
+                <ul>
+                    <li>至少一台大屏电脑</li>
+                    <li>拥有4个空调的地方</li>
+                    <li>学长学姐的指导</li>
+                    <li>每周的技术分享会</li>
+                    <li>找实习时大公司的内推名额</li>
+                    <li>...</li>
+                </ul>
+                <h2>没有任何多余的要求，只是要求你热爱Web！</h2>
+            </div>
+        </div>
+    </div>
+    <script>
+    $(function() {
+        $('#bt').click(function() {
+            var ID = $("#ID").val();
+            var Name = $("#Name").val();
+            var school = $("#school").val();
+            var email = $("#email").val();
+            var Tel = $("#Tel").val();
+            var qq = $("#qq").val();
+            var intro = $("#intro").val();
+
+            $.ajax({
+                type: "POST",
+                url: './add.php',
+                data: "ID=" + ID + "&Name=" + Name + "&school=" + school + "&email=" + email + "&qq=" + qq + "&intro=" + intro + "&Tel=" + Tel,
+                success: function(msg) {
+                    console.log(msg == "success")
+                    $(".warn").text(msg);
+                }
+            })
+        })
+    })
+    </script>
+</body>
+
+</html>

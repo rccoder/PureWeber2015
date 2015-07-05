@@ -1,0 +1,121 @@
+/*
+* @Author: rccoder
+* @Date:   2015-07-05 18:31:45
+* @Last Modified by:   rccoder
+* @Last Modified time: 2015-07-05 20:49:56
+*/
+
+<style> #section0 h1 {
+    display: none;
+    margin-bottom: 10%;
+}
+
+#section0 p {
+    display: none;
+    margin-right: -20%;
+}
+
+#section1 p {
+    text-align: left;
+    display: none;
+    margin-left: 30%;
+    font-height: 1.6em;
+}
+
+#section2 p {
+    text-align: left;
+    display: none;
+    margin-left: 30%;
+    font-height: 1.6em;
+}
+
+#section2 p img {
+    width: 6%;
+}
+
+#section3 p img {
+    width: 6%;
+}
+
+#section4 .intro {
+    left: -130%;
+    position: relative;
+}
+
+.con {
+    width: 800px;
+    margin: auto;
+}
+
+#section3 h1 {
+    float: left;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.form {
+    float: right;
+    width: 384px;
+    margin: auto;
+    display: none;
+}
+
+input {
+    margin-bottom: 20px;
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    color: #555;
+    background-color: #FFF;
+    background-image: none;
+    border: 1px solid #CCC;
+    border-radius: 4px;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset;
+    transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+}
+
+textarea {
+    width: 100%;
+    padding: 6px 12px;
+}
+
+button {
+    display: inline-block;
+    margin-bottom: 0px;
+    font-weight: normal;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    white-space: nowrap;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857;
+    border-radius: 4px;
+    -moz-user-select: none;
+    margin-top: 20px;
+    float: right;
+}
+
+#section4 .con p {
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+
+#section4 .con ul li {
+    text-align: left;
+    font-size: 1.4em;
+}
+
+#section4 .con h2 {
+    display: none;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-top: 30px;
+}
