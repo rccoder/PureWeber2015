@@ -2,7 +2,7 @@
 * @Author: rccoder
 * @Date:   2015-07-05 18:31:45
 * @Last Modified by:   rccoder
-* @Last Modified time: 2015-07-05 20:49:56
+* @Last Modified time: 2015-07-05 21:00:01
 */
 
 <style> #section0 h1 {
@@ -104,11 +104,13 @@ button {
 #section4 .con p {
     font-weight: bold;
     text-align: left;
+    padding-left: 20%;
     margin-bottom: 20px;
     margin-top: 30px;
 }
 
 #section4 .con ul li {
+    padding-left: 30%;
     text-align: left;
     font-size: 1.4em;
 }
