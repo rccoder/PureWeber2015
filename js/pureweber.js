@@ -2,7 +2,7 @@
  * @Author: rccoder
  * @Date:   2015-07-05 18:33:20
  * @Last Modified by:   rccoder
- * @Last Modified time: 2015-07-05 20:49:08
+ * @Last Modified time: 2015-07-06 12:38:16
  */
 $(document).ready(function() {
     $('#fullpage').fullpage({
@@ -63,7 +63,9 @@ $(document).ready(function() {
                 $('#section3').find('.form').fadeIn(1800)
             }
             if (index == 5) {
-                $('#section4').find('h2').fadeIn(2000);
+                $('#section4').find('h2').eq(0).fadeIn(2000, function() {
+                    $('#section4').find('h2').eq(1).fadeIn(2000)
+                });
             }
         }
     });

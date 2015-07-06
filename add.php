@@ -1,12 +1,16 @@
  <?php
-        $con = mysql_connect("localhost", "root", "");
-         if(!$con) {
-            die('Could not connect: ' . mysql_error());
+        // 连主库
+        $link=mysql_connect(SAE_MYSQL_HOST_M.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+        // 连从库
+        // $link=mysql_connect(SAE_MYSQL_HOST_S.':'.SAE_MYSQL_PORT,SAE_MYSQL_USER,SAE_MYSQL_PASS);
+        if($link)
+        {
+            mysql_select_db(SAE_MYSQL_DB,$link);
+            //your code goes here
         }
-        mysql_select_db("pureweber", $con);
         mysql_query("set names 'utf8'");
-        mysql_query("SET character_set_connection=utf8, character_set_results=utf8, character_set_client=utf8", $con);
-        mysql_query("SET SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO'", $con);
+        mysql_query("SET character_set_connection=utf8, character_set_results=utf8, character_set_client=utf8", $link);
+        mysql_query("SET SQL_MODE = 'NO_AUTO_VALUE_ON_ZERO'", $link);
 
         $ID = $_POST["ID"];
         $name = $_POST["Name"];
