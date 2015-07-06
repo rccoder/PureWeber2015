@@ -103,7 +103,8 @@
                 data: "ID=" + ID + "&Name=" + Name + "&school=" + school + "&email=" + email + "&qq=" + qq + "&intro=" + intro + "&Tel=" + Tel,
                 success: function(msg) {
                     console.log(msg == "success")
-                    $(".warn").text(msg);
+                    $("button").text('报名成功！滑动查看你加入后的福利');
+                    $('#bt').attr('disabled',"true")
                 }
             })
         })
